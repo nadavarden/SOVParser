@@ -1,34 +1,103 @@
 import os
 import json
+import time
 from typing import Any, Dict, List
 
 from openai import OpenAI
 
-from dotenv import load_dotenv
-load_dotenv()
+# Load environment variables if python-dotenv is installed
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except:
+    pass
 
-# Expects OPENAI_API_KEY in env
+# Initialize client
 _client = OpenAI()
 
-# You can change this to any suitable model
+# Choose a default model, overridable in .env
 _DEFAULT_MODEL = os.getenv("SOV_PARSER_MODEL", "gpt-4.1-mini")
 
+# ---------------------------------------------------------------------
+# Utility: serialize Excel sheet into a prompt-friendly form
+# ---------------------------------------------------------------------
 
-def _serialize_sheet_rows(rows: List[List[Any]], max_rows: int = 80, max_cols: int = 20) -> List[List[str]]:
+def _serialize_sheet_rows(rows: List[List[Any]], max_rows: int = 80, max_cols: int = 25) -> List[List[str]]:
     """
-    Convert raw sheet rows (from openpyxl) into strings, truncating for prompt safety.
+    Convert raw sheet rows (from openpyxl) into strings so they can be placed in a JSON prompt safely.
     """
-    serialized: List[List[str]] = []
-    for r_idx, row in enumerate(rows[:max_rows]):
-        out_row: List[str] = []
-        for c_idx, cell in enumerate(row[:max_cols]):
+    out = []
+    for r in rows[:max_rows]:
+        row_out = []
+        for cell in r[:max_cols]:
             if cell is None:
-                out_row.append("")
+                row_out.append("")
             else:
-                out_row.append(str(cell))
-        serialized.append(out_row)
-    return serialized
+                try:
+                    row_out.append(str(cell))
+                except:
+                    row_out.append("")
+        out.append(row_out)
+    return out
 
+
+# ---------------------------------------------------------------------
+# Core AI Function (with JSON fallback logic)
+# ---------------------------------------------------------------------
+
+def _call_openai_with_optional_json(model: str, system_msg: str, user_payload: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Try structured JSON mode first.
+    If the model rejects `response_format={'type': 'json_object'}`,
+    fall back to plain text + json.loads().
+    """
+
+    messages = [
+        {"role": "system", "content": system_msg},
+        {"role": "user", "content": json.dumps(user_payload)}
+    ]
+
+    # --- 1. Attempt JSON-Mode ---
+    try:
+        completion = _client.chat.completions.create(
+            model=model,
+            messages=messages,
+            temperature=0.1,
+            response_format={"type": "json_object"},
+        )
+
+        content = completion.choices[0].message.content
+        return json.loads(content)
+
+    except Exception as e:
+        # If the model does NOT support structured JSON:
+        if "response_format" in str(e).lower():
+            pass  # fall through to fallback mode
+        else:
+            raise  # real error
+
+    # --- 2. Fallback: no structured JSON mode ---
+    completion = _client.chat.completions.create(
+        model=model,
+        messages=messages,
+        temperature=0.1,
+    )
+
+    raw = completion.choices[0].message.content
+
+    # Attempt to parse JSON if present
+    try:
+        return json.loads(raw)
+    except:
+        raise RuntimeError(
+            "AI did not return valid JSON.\n"
+            f"Raw output:\n{raw}\n"
+        )
+
+
+# ---------------------------------------------------------------------
+# Public Function: Call AI for a single sheet
+# ---------------------------------------------------------------------
 
 def call_sov_sheet_agent(
     source_file: str,
@@ -37,142 +106,131 @@ def call_sov_sheet_agent(
     model: str = None,
 ) -> Dict[str, Any]:
     """
-    Full AI mode:
-    - Send the entire (truncated) sheet to the LLM
-    - Ask it to produce a structured SOV JSON with:
-        { "properties": [...], "buildings": [...] }
+    Sends one Excel sheet to the AI engine and requests:
 
-    Each property record uses canonical PROPERTY_FIELDS.
-    Each building record uses canonical BUILDING_FIELDS.
+        {
+            "properties": [...],
+            "buildings": [...]
+        }
+
+    This is full-AI mode (Mode C) — the AI constructs the structure itself.
     """
+
     model = model or _DEFAULT_MODEL
     sheet_data = _serialize_sheet_rows(rows)
 
     system_msg = """
-You are an expert underwriter assistant that parses Statement of Values (SOV) spreadsheets
-for insurance. You receive a 2D array representing a single worksheet from Excel (rows × columns).
+You are an expert in parsing insurance Statement of Values (SOV) spreadsheets.
 
-Your job:
-1. Identify the property-level / summary information (one record per sheet).
-2. Identify building-level rows (one record per building).
-3. Map them into a canonical JSON schema with specific field names.
+You receive a JSON structure:
+{
+  "source_file": "...",
+  "sheet_name": "...",
+  "sheet_data": [[row1col1, row1col2, ...], [row2col1, ...], ...]
+}
 
-You MUST return valid JSON ONLY, with this top-level structure:
+You must return **valid JSON only** with the structure:
 
 {
   "properties": [
-    {
-      "source_file": "...",
-      "sheet_name": "...",
-      "number_of_buildings": float or null,
-      "roof_type": string or null,
-      "building_valuation_type": string or null,
-      "building_replacement_cost": float or null,
-      "blanket_outdoor_property": float or null,
-      "business_personal_property": float or null,
-      "total_insurable_value": float or null,
-      "general_liability": float or null,
-      "building_ordinance_a": float or null,
-      "building_ordinance_b": float or null,
-      "building_ordinance_c": float or null,
-      "equipment_breakdown": float or null,
-      "sewer_or_drain_backup": float or null,
-      "business_income": float or null,
-      "hired_and_non_owned_auto": float or null,
-      "playgrounds_number": float or null,
-      "streets_miles": float or null,
-      "pools_number": float or null,
-      "spas_number": float or null,
-      "wader_pools_number": float or null,
-      "restroom_building_sq_ft": float or null,
-      "guardhouse_sq_ft": float or null,
-      "clubhouse_sq_ft": float or null,
-      "fitness_center_sq_ft": float or null,
-      "tennis_courts_number": float or null,
-      "basketball_courts_number": float or null,
-      "other_sport_courts_number": float or null,
-      "walking_biking_trails_miles": float or null,
-      "lakes_or_ponds_number": float or null,
-      "boat_docks_and_slips_number": float or null,
-      "dog_parks_number": float or null,
-      "elevators_number": float or null,
-      "commercial_exposure_sq_ft": float or null
-    }
+    { <ONE property record for this sheet> }
   ],
   "buildings": [
-    {
-      "source_file": "...",
-      "sheet_name": "...",
-      "row_index": integer Excel row index or null,
-      "building_number": string or null,
-      "location_full_address": string or null,
-      "location_address": string or null,
-      "location_city": string or null,
-      "location_state": string or null,
-      "location_zip": string or null,
-      "lat": float or null,
-      "long": float or null,
-      "betterview_id": string or null,
-      "betterview_building_number": string or null,
-      "units_per_building": float or null,
-      "replacement_cost_tiv": float or null,
-      "num_units": float or null,
-      "livable_sq_ft": float or null,
-      "garage_sq_ft": float or null,
-      "commercial_sq_ft": float or null,
-      "building_class": string or null,
-      "parking_type": string or null,
-      "roof_type": string or null,
-      "smoke_detectors": string or null,
-      "sprinklered": string or null,
-      "year_of_construction": float or null,
-      "number_of_stories": float or null,
-      "construction_type": string or null
-    }
+    { <ONE building record per building row> },
+    ...
   ]
 }
 
-Rules:
-- Use null for any field you cannot confidently determine.
-- Infer numeric fields even if the sheet has them formatted as text.
-- Do NOT invent buildings or properties that aren't clearly present.
-- Exclude rows that are amenities only (e.g., Lighting, Mailboxes, Signs/Monuments, Landscaping-only rows).
-- Row index should be 1-based Excel row index if you can infer it; otherwise null.
-- There should be at most ONE property record per worksheet (the summary for that sheet).
-- Field names MUST exactly match the schema above.
+All property and building fields must match these canonical names exactly:
+
+PROPERTY FIELDS:
+- source_file
+- sheet_name
+- number_of_buildings
+- roof_type
+- building_valuation_type
+- building_replacement_cost
+- blanket_outdoor_property
+- business_personal_property
+- total_insurable_value
+- general_liability
+- building_ordinance_a
+- building_ordinance_b
+- building_ordinance_c
+- equipment_breakdown
+- sewer_or_drain_backup
+- business_income
+- hired_and_non_owned_auto
+- playgrounds_number
+- streets_miles
+- pools_number
+- spas_number
+- wader_pools_number
+- restroom_building_sq_ft
+- guardhouse_sq_ft
+- clubhouse_sq_ft
+- fitness_center_sq_ft
+- tennis_courts_number
+- basketball_courts_number
+- other_sport_courts_number
+- walking_biking_trails_miles
+- lakes_or_ponds_number
+- boat_docks_and_slips_number
+- dog_parks_number
+- elevators_number
+- commercial_exposure_sq_ft
+
+BUILDING FIELDS:
+- source_file
+- sheet_name
+- row_index          (1-based Excel index if possible)
+- building_number
+- location_full_address
+- location_address
+- location_city
+- location_state
+- location_zip
+- lat
+- long
+- betterview_id
+- betterview_building_number
+- units_per_building
+- replacement_cost_tiv
+- num_units
+- livable_sq_ft
+- garage_sq_ft
+- commercial_sq_ft
+- building_class
+- parking_type
+- roof_type
+- smoke_detectors
+- sprinklered
+- year_of_construction
+- number_of_stories
+- construction_type
+
+RULES:
+- ONE property record per worksheet.
+- Use null where unknown.
+- Exclude amenity rows (e.g., “Lighting”, “Mailboxes”, “Signs/Monuments”).
+- Detect buildings using heuristics: numerical building number + SqFt/Units patterns.
+- All numbers may be formatted as strings in the sheet; convert them to numbers if possible.
 """
 
-    user_msg = {
-        "role": "user",
-        "content": json.dumps(
-            {
-                "source_file": source_file,
-                "sheet_name": sheet_name,
-                "sheet_data": sheet_data,
-            }
-        ),
+    payload = {
+        "source_file": source_file,
+        "sheet_name": sheet_name,
+        "sheet_data": sheet_data,
     }
 
-    completion = _client.chat.completions.create(
-        model=model,
-        messages=[
-            {"role": "system", "content": system_msg},
-            user_msg,
-        ],
-        response_format={"type": "json_object"},
-        temperature=0.1,
-    )
+    # Retry logic for robustness
+    for attempt in range(3):
+        try:
+            return _call_openai_with_optional_json(model, system_msg, payload)
+        except Exception as e:
+            if attempt == 2:
+                raise
+            time.sleep(1.2)
 
-    content = completion.choices[0].message.content
-    try:
-        result = json.loads(content)
-    except Exception as e:
-        raise RuntimeError(f"Failed to parse AI JSON response: {e}\nRaw: {content}")
-
-    # Basic sanity
-    if "properties" not in result:
-        result["properties"] = []
-    if "buildings" not in result:
-        result["buildings"] = []
-
-    return result
+    # should never hit here
+    return {"properties": [], "buildings": []}

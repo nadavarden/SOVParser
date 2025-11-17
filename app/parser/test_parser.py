@@ -1,5 +1,5 @@
 import json
-from app.parser.sov_parser import SOVParser
+from app.parser.sov_parser_ai import SOVParser
 
 
 
@@ -39,4 +39,4 @@ def test_excel(path: str):
 
 if __name__ == "__main__":
     # Put your test file name here
-    test_excel("SOV_docs/LaBarre/LaBarre2_SOV.xlsx")
+    test_excel("SOV_docs/LaBarre/LaBarre1_SOV.xlsx")
