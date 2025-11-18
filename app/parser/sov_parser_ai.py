@@ -225,14 +225,19 @@ def _rows_from_sheet(ws) -> List[List[Any]]:
 
 
 def _coerce_float(v: Any) -> Optional[float]:
+    """
+    Convert values like "1,234", "  123.45 ", or 123 to float.
+    Treat empty strings, 'n/a', '-', etc. as None.
+    """
     if v is None:
         return None
     if isinstance(v, (int, float)):
         return float(v)
     try:
-        s = str(v).replace(",", "").strip()
-        if not s:
+        s = str(v).strip().lower()
+        if s in {"", "n/a", "na", "none", "null", "-", "--"}:
             return None
+        s = s.replace(",", "")
         return float(s)
     except Exception:
         return None
