@@ -200,7 +200,7 @@ def evaluate_file(xlsx_path: str, ground_truth_path: str) -> Dict[str, Any]:
                 model=DEFAULT_MODEL,
             )
         except Exception as e:
-            print(f"  ❌ Agent failed: {e}")
+            print(f"Agent failed: {e}")
             results[agent_name] = {"error": str(e)}
             continue
 

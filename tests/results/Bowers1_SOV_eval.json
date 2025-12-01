@@ -1,0 +1,4042 @@
+{
+  "multi_agent": {
+    "runtime_seconds": 37.06,
+    "overall_accuracy": 0.518,
+    "overall_coverage": 0.367,
+    "properties": {
+      "num_expected_records": 1,
+      "num_predicted_records": 2,
+      "total_fields": 32,
+      "total_similarity": 28.440476236394552,
+      "filled_fields": 4,
+      "accuracy": 0.889,
+      "coverage": 0.125,
+      "records": [
+        {
+          "source_file": {
+            "expected": "Bowers1_sov.xlsx",
+            "predicted": "Bowers1_SOV.xlsx",
+            "similarity": 1.0
+          },
+          "sheet_name": {
+            "expected": "Consolidated",
+            "predicted": "Detail",
+            "similarity": 0.0833
+          },
+          "number_of_buildings": {
+            "expected": "14",
+            "predicted": 5,
+            "similarity": 0.3571
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": "Asphalt",
+            "similarity": 1.0
+          },
+          "building_valuation_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_replacement_cost": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "total_insurable_value": {
+            "expected": "37116017",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "general_liability": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_ordinance_a": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_ordinance_b": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_ordinance_c": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "equipment_breakdown": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "business_income": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "hired_and_non_owned_auto": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "playgrounds_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "streets_miles": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "pools_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "spas_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "water_pools_number": {
+            "expected": "1",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "restroom_building_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "guardhouse_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "clubhouse_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "fitness_center_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "tennis_courts_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "basketball_courts_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "other_sport_courts_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "walking_biking_trails_miles": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "lakes_or_ponds_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "boat_docks_and_slips_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "dog_parks_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "elevators_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "commercial_exposure_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          }
+        },
+        {}
+      ]
+    },
+    "buildings": {
+      "num_expected_records": 15,
+      "num_predicted_records": 10,
+      "total_fields": 360,
+      "total_similarity": 174.4229743018179,
+      "filled_fields": 140,
+      "accuracy": 0.485,
+      "coverage": 0.389,
+      "records": [
+        {
+          "building_number": {
+            "expected": "1",
+            "predicted": "1",
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "1544 W Galbraith Rd, Cincinnati, OH 45231",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": "1544 W Galbraith Rd",
+            "similarity": 0.0476
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": "Cincinnati",
+            "similarity": 0.1
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": "OH",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": "45231",
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "20",
+            "predicted": 8,
+            "similarity": 0.4
+          },
+          "replacement_cost_tiv": {
+            "expected": "3769090",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "num_units": {
+            "expected": "1 thru 20",
+            "predicted": 1,
+            "similarity": 0.1111
+          },
+          "livable_square_footage": {
+            "expected": "19800",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": "Asphalt",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": 1986,
+            "similarity": 0.9985
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": "Frame",
+            "similarity": 0.2632
+          }
+        },
+        {
+          "building_number": {
+            "expected": "2",
+            "predicted": "2",
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "1544 W Galbraith Rd, Cincinnati, OH 45231",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": "1544 W Galbraith Rd",
+            "similarity": 0.0476
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": "Cincinnati",
+            "similarity": 0.1
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": "OH",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": "45231",
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "8",
+            "predicted": 12,
+            "similarity": 0.5
+          },
+          "replacement_cost_tiv": {
+            "expected": "1118054",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "num_units": {
+            "expected": "21 thru 28",
+            "predicted": 1,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "5232",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": "Asphalt",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": 1986,
+            "similarity": 0.9985
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": "Frame",
+            "similarity": 0.2632
+          }
+        },
+        {
+          "building_number": {
+            "expected": "3",
+            "predicted": "3",
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "1544 W Galbraith Rd, Cincinnati, OH 45231",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": "1544 W Galbraith Rd",
+            "similarity": 0.0476
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": "Cincinnati",
+            "similarity": 0.1
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": "OH",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": "45231",
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "8",
+            "predicted": 12,
+            "similarity": 0.5
+          },
+          "replacement_cost_tiv": {
+            "expected": "3112306",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "num_units": {
+            "expected": "29 thru 36",
+            "predicted": 1,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "12238",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": "Asphalt",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": 1986,
+            "similarity": 0.9985
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": "Frame",
+            "similarity": 0.2632
+          }
+        },
+        {
+          "building_number": {
+            "expected": "4",
+            "predicted": "4",
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "1544 W Galbraith Rd, Cincinnati, OH 45231",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": "1544 W Galbraith Rd",
+            "similarity": 0.0476
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": "Cincinnati",
+            "similarity": 0.1
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": "OH",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": "45231",
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 12,
+            "similarity": 0.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2374285",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "num_units": {
+            "expected": "37 thru 42",
+            "predicted": 1,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "9132",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": "Asphalt",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": 1986,
+            "similarity": 0.9985
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": "Frame",
+            "similarity": 0.2632
+          }
+        },
+        {
+          "building_number": {
+            "expected": "5",
+            "predicted": "5",
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "1544 W Galbraith Rd, Cincinnati, OH 45231",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": "1544 W Galbraith Rd",
+            "similarity": 0.0476
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": "Cincinnati",
+            "similarity": 0.1
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": "OH",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": "45231",
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "9",
+            "predicted": 8,
+            "similarity": 0.8889
+          },
+          "replacement_cost_tiv": {
+            "expected": "3384799",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "num_units": {
+            "expected": "43 thru 51",
+            "predicted": 1,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "13397",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": "Asphalt",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": 1986,
+            "similarity": 0.9985
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": "Frame",
+            "similarity": 0.2632
+          }
+        },
+        {
+          "building_number": {
+            "expected": "5",
+            "predicted": "1",
+            "similarity": 0.2
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "1544 W Galbraith Rd, Cincinnati, OH 45231",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": "1544 W Galbraith Rd",
+            "similarity": 0.0476
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": "Cincinnati",
+            "similarity": 0.1
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": "OH",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": "45231",
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 8,
+            "similarity": 0.6667
+          },
+          "replacement_cost_tiv": {
+            "expected": "2634372",
+            "predicted": 1693364,
+            "similarity": 0.6428
+          },
+          "num_units": {
+            "expected": "52 thru 57",
+            "predicted": 8,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "9962",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": "Asphalt",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": 1986,
+            "similarity": 0.9985
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": "Frame",
+            "similarity": 0.2632
+          }
+        },
+        {
+          "building_number": {
+            "expected": "6",
+            "predicted": "2",
+            "similarity": 0.3333
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "1544 W Galbraith Rd, Cincinnati, OH 45231",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": "1544 W Galbraith Rd",
+            "similarity": 0.0476
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": "Cincinnati",
+            "similarity": 0.1
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": "OH",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": "45231",
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 12,
+            "similarity": 0.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2634372",
+            "predicted": 2440179,
+            "similarity": 0.9263
+          },
+          "num_units": {
+            "expected": "52 thru 57",
+            "predicted": 12,
+            "similarity": 0.1
+          },
+          "livable_square_footage": {
+            "expected": "9962",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": "Asphalt",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": 1986,
+            "similarity": 0.9985
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": "Frame",
+            "similarity": 0.2632
+          }
+        },
+        {
+          "building_number": {
+            "expected": "7",
+            "predicted": "3",
+            "similarity": 0.4286
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "1544 W Galbraith Rd, Cincinnati, OH 45231",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": "1544 W Galbraith Rd",
+            "similarity": 0.0476
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": "Cincinnati",
+            "similarity": 0.1
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": "OH",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": "45231",
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "8",
+            "predicted": 12,
+            "similarity": 0.5
+          },
+          "replacement_cost_tiv": {
+            "expected": "3365973",
+            "predicted": 2440179,
+            "similarity": 0.725
+          },
+          "num_units": {
+            "expected": "58 thru 65",
+            "predicted": 12,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "12238",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": "Asphalt",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": 1986,
+            "similarity": 0.9985
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": "Frame",
+            "similarity": 0.2632
+          }
+        },
+        {
+          "building_number": {
+            "expected": "8",
+            "predicted": "4",
+            "similarity": 0.5
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "1544 W Galbraith Rd, Cincinnati, OH 45231",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": "1544 W Galbraith Rd",
+            "similarity": 0.0476
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": "Cincinnati",
+            "similarity": 0.1
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": "OH",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": "45231",
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 12,
+            "similarity": 0.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2374285",
+            "predicted": 2440179,
+            "similarity": 0.9722
+          },
+          "num_units": {
+            "expected": "66 thru 71",
+            "predicted": 12,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "9132",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": "Asphalt",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": 1986,
+            "similarity": 0.9985
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": "Frame",
+            "similarity": 0.2632
+          }
+        },
+        {
+          "building_number": {
+            "expected": "9",
+            "predicted": "5",
+            "similarity": 0.5556
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "1544 W Galbraith Rd, Cincinnati, OH 45231",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": "1544 W Galbraith Rd",
+            "similarity": 0.0476
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": "Cincinnati",
+            "similarity": 0.1
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": "OH",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": "45231",
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 8,
+            "similarity": 0.6667
+          },
+          "replacement_cost_tiv": {
+            "expected": "2374285",
+            "predicted": 1693364,
+            "similarity": 0.7132
+          },
+          "num_units": {
+            "expected": "72 thru 77",
+            "predicted": 8,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "9132",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": "Asphalt",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": 1986,
+            "similarity": 0.9985
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": "Frame",
+            "similarity": 0.2632
+          }
+        },
+        {
+          "building_number": {
+            "expected": "10",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "5",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "1915108",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "num_units": {
+            "expected": "78 thru 82",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "7069",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": null,
+            "similarity": 0.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "11",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "3",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "1247051",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "num_units": {
+            "expected": "83 thru 85",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "4566",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": null,
+            "similarity": 0.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "12",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2374285",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "num_units": {
+            "expected": "86 thru 91",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "9132",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": null,
+            "similarity": 0.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "13",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "2",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "692900",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "num_units": {
+            "expected": "92 thru 93",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "2619",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": null,
+            "similarity": 0.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "14",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "7",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "3227224",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "num_units": {
+            "expected": "94 thru 100",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "11566",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": null,
+            "similarity": 0.0
+          }
+        }
+      ]
+    }
+  },
+  "single_agent": {
+    "runtime_seconds": 29.77,
+    "overall_accuracy": 0.504,
+    "overall_coverage": 0.393,
+    "properties": {
+      "num_expected_records": 1,
+      "num_predicted_records": 2,
+      "total_fields": 32,
+      "total_similarity": 28.440476236394552,
+      "filled_fields": 4,
+      "accuracy": 0.889,
+      "coverage": 0.125,
+      "records": [
+        {
+          "source_file": {
+            "expected": "Bowers1_sov.xlsx",
+            "predicted": "Bowers1_SOV.xlsx",
+            "similarity": 1.0
+          },
+          "sheet_name": {
+            "expected": "Consolidated",
+            "predicted": "Detail",
+            "similarity": 0.0833
+          },
+          "number_of_buildings": {
+            "expected": "14",
+            "predicted": 5,
+            "similarity": 0.3571
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": "Asphalt",
+            "similarity": 1.0
+          },
+          "building_valuation_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_replacement_cost": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "total_insurable_value": {
+            "expected": "37116017",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "general_liability": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_ordinance_a": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_ordinance_b": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_ordinance_c": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "equipment_breakdown": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "business_income": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "hired_and_non_owned_auto": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "playgrounds_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "streets_miles": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "pools_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "spas_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "water_pools_number": {
+            "expected": "1",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "restroom_building_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "guardhouse_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "clubhouse_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "fitness_center_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "tennis_courts_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "basketball_courts_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "other_sport_courts_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "walking_biking_trails_miles": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "lakes_or_ponds_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "boat_docks_and_slips_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "dog_parks_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "elevators_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "commercial_exposure_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          }
+        },
+        {}
+      ]
+    },
+    "buildings": {
+      "num_expected_records": 15,
+      "num_predicted_records": 10,
+      "total_fields": 360,
+      "total_similarity": 169.3118631907068,
+      "filled_fields": 150,
+      "accuracy": 0.47,
+      "coverage": 0.417,
+      "records": [
+        {
+          "building_number": {
+            "expected": "1",
+            "predicted": 1,
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "1544 W Galbraith Rd, Cincinnati, OH 45231",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": "1544 W Galbraith Rd",
+            "similarity": 0.0476
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": "Cincinnati",
+            "similarity": 0.1
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": "OH",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": "45231",
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "20",
+            "predicted": 8,
+            "similarity": 0.4
+          },
+          "replacement_cost_tiv": {
+            "expected": "3769090",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "num_units": {
+            "expected": "1 thru 20",
+            "predicted": 8,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "19800",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": "Asphalt",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": "Yes",
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": 1986,
+            "similarity": 0.9985
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": "Frame",
+            "similarity": 0.2632
+          }
+        },
+        {
+          "building_number": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "1544 W Galbraith Rd, Cincinnati, OH 45231",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": "1544 W Galbraith Rd",
+            "similarity": 0.0476
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": "Cincinnati",
+            "similarity": 0.1
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": "OH",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": "45231",
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "8",
+            "predicted": 12,
+            "similarity": 0.5
+          },
+          "replacement_cost_tiv": {
+            "expected": "1118054",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "num_units": {
+            "expected": "21 thru 28",
+            "predicted": 12,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "5232",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": "Asphalt",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": "Yes",
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": 1986,
+            "similarity": 0.9985
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": "Frame",
+            "similarity": 0.2632
+          }
+        },
+        {
+          "building_number": {
+            "expected": "3",
+            "predicted": 3,
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "1544 W Galbraith Rd, Cincinnati, OH 45231",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": "1544 W Galbraith Rd",
+            "similarity": 0.0476
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": "Cincinnati",
+            "similarity": 0.1
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": "OH",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": "45231",
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "8",
+            "predicted": 12,
+            "similarity": 0.5
+          },
+          "replacement_cost_tiv": {
+            "expected": "3112306",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "num_units": {
+            "expected": "29 thru 36",
+            "predicted": 12,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "12238",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": "Asphalt",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": "Yes",
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": 1986,
+            "similarity": 0.9985
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": "Frame",
+            "similarity": 0.2632
+          }
+        },
+        {
+          "building_number": {
+            "expected": "4",
+            "predicted": 4,
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "1544 W Galbraith Rd, Cincinnati, OH 45231",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": "1544 W Galbraith Rd",
+            "similarity": 0.0476
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": "Cincinnati",
+            "similarity": 0.1
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": "OH",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": "45231",
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 12,
+            "similarity": 0.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2374285",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "num_units": {
+            "expected": "37 thru 42",
+            "predicted": 12,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "9132",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": "Asphalt",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": "Yes",
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": 1986,
+            "similarity": 0.9985
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": "Frame",
+            "similarity": 0.2632
+          }
+        },
+        {
+          "building_number": {
+            "expected": "5",
+            "predicted": 5,
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "1544 W Galbraith Rd, Cincinnati, OH 45231",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": "1544 W Galbraith Rd",
+            "similarity": 0.0476
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": "Cincinnati",
+            "similarity": 0.1
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": "OH",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": "45231",
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "9",
+            "predicted": 8,
+            "similarity": 0.8889
+          },
+          "replacement_cost_tiv": {
+            "expected": "3384799",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "num_units": {
+            "expected": "43 thru 51",
+            "predicted": 8,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "13397",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": "Asphalt",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": "Yes",
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": 1986,
+            "similarity": 0.9985
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": "Frame",
+            "similarity": 0.2632
+          }
+        },
+        {
+          "building_number": {
+            "expected": "5",
+            "predicted": 1,
+            "similarity": 0.2
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "1544 W Galbraith Rd, Cincinnati, OH 45231",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": "1544 W Galbraith Rd",
+            "similarity": 0.0476
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": "Cincinnati",
+            "similarity": 0.1
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": "OH",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": "45231",
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 8,
+            "similarity": 0.6667
+          },
+          "replacement_cost_tiv": {
+            "expected": "2634372",
+            "predicted": 1693364,
+            "similarity": 0.6428
+          },
+          "num_units": {
+            "expected": "52 thru 57",
+            "predicted": 8,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "9962",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": "Attached Garage / Carport",
+            "similarity": 0.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": "Asphalt",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": 1,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": 1986,
+            "similarity": 0.9985
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": "Frame",
+            "similarity": 0.2632
+          }
+        },
+        {
+          "building_number": {
+            "expected": "6",
+            "predicted": 2,
+            "similarity": 0.3333
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "1544 W Galbraith Rd, Cincinnati, OH 45231",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": "1544 W Galbraith Rd",
+            "similarity": 0.0476
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": "Cincinnati",
+            "similarity": 0.1
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": "OH",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": "45231",
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 12,
+            "similarity": 0.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2634372",
+            "predicted": 2440179,
+            "similarity": 0.9263
+          },
+          "num_units": {
+            "expected": "52 thru 57",
+            "predicted": 12,
+            "similarity": 0.1
+          },
+          "livable_square_footage": {
+            "expected": "9962",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": "Attached Garage / Carport",
+            "similarity": 0.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": "Asphalt",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": 1,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": 1986,
+            "similarity": 0.9985
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": "Frame",
+            "similarity": 0.2632
+          }
+        },
+        {
+          "building_number": {
+            "expected": "7",
+            "predicted": 3,
+            "similarity": 0.4286
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "1544 W Galbraith Rd, Cincinnati, OH 45231",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": "1544 W Galbraith Rd",
+            "similarity": 0.0476
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": "Cincinnati",
+            "similarity": 0.1
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": "OH",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": "45231",
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "8",
+            "predicted": 12,
+            "similarity": 0.5
+          },
+          "replacement_cost_tiv": {
+            "expected": "3365973",
+            "predicted": 2440179,
+            "similarity": 0.725
+          },
+          "num_units": {
+            "expected": "58 thru 65",
+            "predicted": 12,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "12238",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": "Attached Garage / Carport",
+            "similarity": 0.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": "Asphalt",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": 1,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": 1986,
+            "similarity": 0.9985
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": "Frame",
+            "similarity": 0.2632
+          }
+        },
+        {
+          "building_number": {
+            "expected": "8",
+            "predicted": 4,
+            "similarity": 0.5
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "1544 W Galbraith Rd, Cincinnati, OH 45231",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": "1544 W Galbraith Rd",
+            "similarity": 0.0476
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": "Cincinnati",
+            "similarity": 0.1
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": "OH",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": "45231",
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 12,
+            "similarity": 0.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2374285",
+            "predicted": 2440179,
+            "similarity": 0.9722
+          },
+          "num_units": {
+            "expected": "66 thru 71",
+            "predicted": 12,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "9132",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": "Attached Garage / Carport",
+            "similarity": 0.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": "Asphalt",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": 1,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": 1986,
+            "similarity": 0.9985
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": "Frame",
+            "similarity": 0.2632
+          }
+        },
+        {
+          "building_number": {
+            "expected": "9",
+            "predicted": 5,
+            "similarity": 0.5556
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "1544 W Galbraith Rd, Cincinnati, OH 45231",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": "1544 W Galbraith Rd",
+            "similarity": 0.0476
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": "Cincinnati",
+            "similarity": 0.1
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": "OH",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": "45231",
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 8,
+            "similarity": 0.6667
+          },
+          "replacement_cost_tiv": {
+            "expected": "2374285",
+            "predicted": 1693364,
+            "similarity": 0.7132
+          },
+          "num_units": {
+            "expected": "72 thru 77",
+            "predicted": 8,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "9132",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": "Attached Garage / Carport",
+            "similarity": 0.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": "Asphalt",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": 1,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": 1986,
+            "similarity": 0.9985
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": "Frame",
+            "similarity": 0.2632
+          }
+        },
+        {
+          "building_number": {
+            "expected": "10",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "5",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "1915108",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "num_units": {
+            "expected": "78 thru 82",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "7069",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": null,
+            "similarity": 0.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "11",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "3",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "1247051",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "num_units": {
+            "expected": "83 thru 85",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "4566",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": null,
+            "similarity": 0.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "12",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2374285",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "num_units": {
+            "expected": "86 thru 91",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "9132",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": null,
+            "similarity": 0.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "13",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "2",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "692900",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "num_units": {
+            "expected": "92 thru 93",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "2619",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": null,
+            "similarity": 0.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "14",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "location_address": {
+            "expected": "Montgomery Road 10555",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_city": {
+            "expected": "Montgomery",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_state": {
+            "expected": "OH",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "location_zip": {
+            "expected": "4524",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "lat": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "long": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "7",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "3227224",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "num_units": {
+            "expected": "94 thru 100",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "11566",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "Asphalt",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "No",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "year_of_construction": {
+            "expected": "1989",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "construction_type": {
+            "expected": "Frame/ Brick Veneer",
+            "predicted": null,
+            "similarity": 0.0
+          }
+        }
+      ]
+    }
+  }
+}

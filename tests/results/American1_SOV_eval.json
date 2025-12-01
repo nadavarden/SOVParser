@@ -1,0 +1,3298 @@
+{
+  "multi_agent": {
+    "runtime_seconds": 51.62,
+    "overall_accuracy": 0.714,
+    "overall_coverage": 0.58,
+    "properties": {
+      "num_expected_records": 1,
+      "num_predicted_records": 1,
+      "total_fields": 32,
+      "total_similarity": 26.998831229546518,
+      "filled_fields": 5,
+      "accuracy": 0.844,
+      "coverage": 0.156,
+      "records": [
+        {
+          "source_file": {
+            "expected": "American1_sov.xlsx",
+            "predicted": "American1_SOV.xlsx",
+            "similarity": 1.0
+          },
+          "sheet_name": {
+            "expected": "Sheet1",
+            "predicted": "Sheet1",
+            "similarity": 1.0
+          },
+          "number_of_buildings": {
+            "expected": "12",
+            "predicted": 12,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "building_valuation_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_replacement_cost": {
+            "expected": null,
+            "predicted": 29963500,
+            "similarity": 0.0
+          },
+          "total_insurable_value": {
+            "expected": "29946000",
+            "predicted": 29981000,
+            "similarity": 0.9988
+          },
+          "general_liability": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_ordinance_a": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_ordinance_b": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_ordinance_c": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "equipment_breakdown": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "business_income": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "hired_and_non_owned_auto": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "playgrounds_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "streets_miles": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "pools_number": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "spas_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "wader_pools_number": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "restroom_building_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "guardhouse_sq_ft": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "clubhouse_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "fitness_center_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "tennis_courts_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "basketball_courts_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "other_sport_courts_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "walking_biking_trails_miles": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "lakes_or_ponds_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "boat_docks_and_slips_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "dog_parks_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "elevators_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "commercial_exposure_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          }
+        }
+      ]
+    },
+    "buildings": {
+      "num_expected_records": 12,
+      "num_predicted_records": 12,
+      "total_fields": 287,
+      "total_similarity": 200.92261904765738,
+      "filled_fields": 180,
+      "accuracy": 0.7,
+      "coverage": 0.627,
+      "records": [
+        {
+          "building_number": {
+            "expected": "1",
+            "predicted": "1",
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7701 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8933",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7701 FAIRWAY AVE SE",
+            "predicted": "7701 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8933",
+            "predicted": "98065-8933",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.530909",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.869462",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": "",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "3",
+            "predicted": 3,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "1490000",
+            "predicted": 1490000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 3,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "3969",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "1650",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": "ArchitecturalShingles",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "2",
+            "predicted": "2",
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7703 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8934",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7703 FAIRWAY AVE SE",
+            "predicted": "7703 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8934",
+            "predicted": "98065-8934",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.53143",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.868826",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2548000",
+            "predicted": 2548000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 6,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "7890",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "3300",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": "ArchitecturalShingles",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "3",
+            "predicted": "3",
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7709 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8944",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7709 FAIRWAY AVE SE",
+            "predicted": "7709 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8944",
+            "predicted": "98065-8944",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.530505",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.868826",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2548000",
+            "predicted": 2548000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 6,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "7890",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "3300",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": "ArchitecturalShingles",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "4",
+            "predicted": "4",
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7715 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8942",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7715 FAIRWAY AVE SE",
+            "predicted": "7715 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8942",
+            "predicted": "98065-8942",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.530308",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.870179",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2548000",
+            "predicted": 2548000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 6,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "7890",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "3300",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": "ArchitecturalShingles",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "5",
+            "predicted": "5",
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7717 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8937",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7717 FAIRWAY AVE SE",
+            "predicted": "7717 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8937",
+            "predicted": "98065-8937",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.530713",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.870225",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2548000",
+            "predicted": 2548000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 6,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "7890",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "3300",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": "ArchitecturalShingles",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "6",
+            "predicted": "6",
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7721 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8939",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7721 FAIRWAY AVE SE",
+            "predicted": "7721 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8939",
+            "predicted": "98065-8939",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.531027",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.870225",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2548000",
+            "predicted": 2548000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 6,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "7890",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "3300",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": "ArchitecturalShingles",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "7",
+            "predicted": "7",
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7723 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8940",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7723 FAIRWAY AVE SE",
+            "predicted": "7723 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8940",
+            "predicted": "98065-8940",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.531292",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.869892",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2548000",
+            "predicted": 2548000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 6,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "7890",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "3300",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": "ArchitecturalShingles",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "8",
+            "predicted": "8",
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7719 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8938",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7719 FAIRWAY AVE SE",
+            "predicted": "7719 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8938",
+            "predicted": "98065-8938",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.530831",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.86884",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2548000",
+            "predicted": 2548000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 6,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "7890",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "3300",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": "ArchitecturalShingles",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "9",
+            "predicted": "9",
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7707 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8936",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7707 FAIRWAY AVE SE",
+            "predicted": "7707 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8936",
+            "predicted": "98065-8936",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.530923",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.868862",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2655000",
+            "predicted": 2655000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 6,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "8536",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "3300",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": "ArchitecturalShingles",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "10",
+            "predicted": "10",
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7711 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8943",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7711 FAIRWAY AVE SE",
+            "predicted": "7711 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8943",
+            "predicted": "98065-8943",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.530446",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.869283",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2655000",
+            "predicted": 2655000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 6,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "8536",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "3300",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": "ArchitecturalShingles",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": "",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "11",
+            "predicted": "11",
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7713 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8941",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7713 FAIRWAY AVE SE",
+            "predicted": "7713 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8941",
+            "predicted": "98065-8941",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.530384",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.869719",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2655000",
+            "predicted": 2655000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 6,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "8536",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "3300",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": "ArchitecturalShingles",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "12",
+            "predicted": "12",
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7705 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8935",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7705 FAIRWAY AVE SE",
+            "predicted": "7705 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8935",
+            "predicted": "98065-8935",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.531457",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.869318",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2655000",
+            "predicted": 2655000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 6,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "8536",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "3300",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": "ArchitecturalShingles",
+            "similarity": 1.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        }
+      ]
+    }
+  },
+  "single_agent": {
+    "runtime_seconds": 32.77,
+    "overall_accuracy": 0.602,
+    "overall_coverage": 0.618,
+    "properties": {
+      "num_expected_records": 1,
+      "num_predicted_records": 1,
+      "total_fields": 32,
+      "total_similarity": 25.99941561477326,
+      "filled_fields": 6,
+      "accuracy": 0.812,
+      "coverage": 0.188,
+      "records": [
+        {
+          "source_file": {
+            "expected": "American1_sov.xlsx",
+            "predicted": "American1_SOV.xlsx",
+            "similarity": 1.0
+          },
+          "sheet_name": {
+            "expected": "Sheet1",
+            "predicted": "Sheet1",
+            "similarity": 1.0
+          },
+          "number_of_buildings": {
+            "expected": "12",
+            "predicted": 12,
+            "similarity": 1.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "building_valuation_type": {
+            "expected": null,
+            "predicted": "RC",
+            "similarity": 0.0
+          },
+          "building_replacement_cost": {
+            "expected": null,
+            "predicted": 29963500,
+            "similarity": 0.0
+          },
+          "total_insurable_value": {
+            "expected": "29946000",
+            "predicted": 29963500,
+            "similarity": 0.9994
+          },
+          "general_liability": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_ordinance_a": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_ordinance_b": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "building_ordinance_c": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "equipment_breakdown": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "business_income": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "hired_and_non_owned_auto": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "playgrounds_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "streets_miles": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "pools_number": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "spas_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "wader_pools_number": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "restroom_building_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "guardhouse_sq_ft": {
+            "expected": "0",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "clubhouse_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "fitness_center_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "tennis_courts_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "basketball_courts_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "other_sport_courts_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "walking_biking_trails_miles": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "lakes_or_ponds_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "boat_docks_and_slips_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "dog_parks_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "elevators_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "commercial_exposure_sq_ft": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          }
+        }
+      ]
+    },
+    "buildings": {
+      "num_expected_records": 12,
+      "num_predicted_records": 12,
+      "total_fields": 287,
+      "total_similarity": 165.92261904765738,
+      "filled_fields": 191,
+      "accuracy": 0.578,
+      "coverage": 0.666,
+      "records": [
+        {
+          "building_number": {
+            "expected": "1",
+            "predicted": 1,
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7701 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8933",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7701 FAIRWAY AVE SE",
+            "predicted": "7701 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8933",
+            "predicted": "98065-8933",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.530909",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.869462",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": "",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "3",
+            "predicted": 3,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "1490000",
+            "predicted": 1490000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 3,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "3969",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "1650",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": "residentialcondominiumswithoutmercantile",
+            "similarity": 0.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": "Attached/Built-in Garage",
+            "similarity": 0.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7703 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8934",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7703 FAIRWAY AVE SE",
+            "predicted": "7703 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8934",
+            "predicted": "98065-8934",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.53143",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.868826",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2548000",
+            "predicted": 2548000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 6,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "7890",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "3300",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": "residentialcondominiumswithoutmercantile",
+            "similarity": 0.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": "Attached/Built-in Garage",
+            "similarity": 0.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "3",
+            "predicted": 3,
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7709 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8944",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7709 FAIRWAY AVE SE",
+            "predicted": "7709 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8944",
+            "predicted": "98065-8944",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.530505",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.868826",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2548000",
+            "predicted": 2548000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 6,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "7890",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "3300",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": "residentialcondominiumswithoutmercantile",
+            "similarity": 0.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": "Attached/Built-in Garage",
+            "similarity": 0.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "4",
+            "predicted": 4,
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7715 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8942",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7715 FAIRWAY AVE SE",
+            "predicted": "7715 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8942",
+            "predicted": "98065-8942",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.530308",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.870179",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2548000",
+            "predicted": 2548000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 6,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "7890",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "3300",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": "residentialcondominiumswithoutmercantile",
+            "similarity": 0.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": "Attached/Built-in Garage",
+            "similarity": 0.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "5",
+            "predicted": 5,
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7717 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8937",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7717 FAIRWAY AVE SE",
+            "predicted": "7717 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8937",
+            "predicted": "98065-8937",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.530713",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.870225",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2548000",
+            "predicted": 2548000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 6,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "7890",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "3300",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": "residentialcondominiumswithoutmercantile",
+            "similarity": 0.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": "Attached/Built-in Garage",
+            "similarity": 0.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7721 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8939",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7721 FAIRWAY AVE SE",
+            "predicted": "7721 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8939",
+            "predicted": "98065-8939",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.531027",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.870225",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2548000",
+            "predicted": 2548000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 6,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "7890",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "3300",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": "residentialcondominiumswithoutmercantile",
+            "similarity": 0.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": "Attached/Built-in Garage",
+            "similarity": 0.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "7",
+            "predicted": 7,
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7723 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8940",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7723 FAIRWAY AVE SE",
+            "predicted": "7723 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8940",
+            "predicted": "98065-8940",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.531292",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.869892",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2548000",
+            "predicted": 2548000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 6,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "7890",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "3300",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": "residentialcondominiumswithoutmercantile",
+            "similarity": 0.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": "Attached/Built-in Garage",
+            "similarity": 0.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "8",
+            "predicted": 8,
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7719 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8938",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7719 FAIRWAY AVE SE",
+            "predicted": "7719 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8938",
+            "predicted": "98065-8938",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.530831",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.86884",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2548000",
+            "predicted": 2548000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 6,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "7890",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "3300",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": "residentialcondominiumswithoutmercantile",
+            "similarity": 0.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": "Attached/Built-in Garage",
+            "similarity": 0.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "9",
+            "predicted": 9,
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7707 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8936",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7707 FAIRWAY AVE SE",
+            "predicted": "7707 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8936",
+            "predicted": "98065-8936",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.530923",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.868862",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2655000",
+            "predicted": 2655000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 6,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "8536",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "3300",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": "residentialcondominiumswithoutmercantile",
+            "similarity": 0.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": "Attached/Built-in Garage",
+            "similarity": 0.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "10",
+            "predicted": 10,
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7711 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8943",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7711 FAIRWAY AVE SE",
+            "predicted": "7711 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8943",
+            "predicted": "98065-8943",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.530446",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.869283",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2655000",
+            "predicted": 2655000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 6,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "8536",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "3300",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": "residentialcondominiumswithoutmercantile",
+            "similarity": 0.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": "Attached/Built-in Garage",
+            "similarity": 0.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "smoke_detectors": {
+            "expected": "",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "11",
+            "predicted": 11,
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7713 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8941",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7713 FAIRWAY AVE SE",
+            "predicted": "7713 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8941",
+            "predicted": "98065-8941",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.530384",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.869719",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2655000",
+            "predicted": 2655000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 6,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "8536",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "3300",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "building_class": {
+            "expected": null,
+            "predicted": "residentialcondominiumswithoutmercantile",
+            "similarity": 0.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": "Attached/Built-in Garage",
+            "similarity": 0.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        },
+        {
+          "building_number": {
+            "expected": "12",
+            "predicted": 12,
+            "similarity": 1.0
+          },
+          "location_full_address": {
+            "expected": null,
+            "predicted": "7705 FAIRWAY AVE SE, SNOQUALMIE, WA 98065-8935",
+            "similarity": 0.0
+          },
+          "location_address": {
+            "expected": "7705 FAIRWAY AVE SE",
+            "predicted": "7705 FAIRWAY AVE SE",
+            "similarity": 1.0
+          },
+          "location_city": {
+            "expected": "SNOQUALMIE",
+            "predicted": "SNOQUALMIE",
+            "similarity": 1.0
+          },
+          "location_state": {
+            "expected": "WA",
+            "predicted": "WA",
+            "similarity": 1.0
+          },
+          "location_zip": {
+            "expected": "98065-8935",
+            "predicted": "98065-8935",
+            "similarity": 1.0
+          },
+          "lat": {
+            "expected": "47.531457",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "long": {
+            "expected": "-121.869318",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "betterview_id": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "betterview_building_number": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "units_per_building": {
+            "expected": "6",
+            "predicted": 6,
+            "similarity": 1.0
+          },
+          "replacement_cost_tiv": {
+            "expected": "2655000",
+            "predicted": 2655000,
+            "similarity": 1.0
+          },
+          "num_units": {
+            "expected": null,
+            "predicted": 6,
+            "similarity": 0.0
+          },
+          "livable_square_footage": {
+            "expected": "8536",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "garage_square_footage": {
+            "expected": "3300",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "commercial_sq_ft": {
+            "expected": null,
+            "predicted": 0,
+            "similarity": 0.0
+          },
+          "parking_type": {
+            "expected": null,
+            "predicted": "Attached/Built-in Garage",
+            "similarity": 0.0
+          },
+          "roof_type": {
+            "expected": "ArchitecturalShingles",
+            "predicted": null,
+            "similarity": 0.0
+          },
+          "smoke_detectors": {
+            "expected": null,
+            "predicted": null,
+            "similarity": 1.0
+          },
+          "sprinklered": {
+            "expected": "Yes",
+            "predicted": "Yes",
+            "similarity": 1.0
+          },
+          "year_of_construction": {
+            "expected": "2016",
+            "predicted": 2003,
+            "similarity": 0.9936
+          },
+          "number_of_stories": {
+            "expected": "2",
+            "predicted": 2,
+            "similarity": 1.0
+          },
+          "construction_type": {
+            "expected": "Frame",
+            "predicted": "Frame",
+            "similarity": 1.0
+          }
+        }
+      ]
+    }
+  }
+}

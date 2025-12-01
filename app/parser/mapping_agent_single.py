@@ -8,6 +8,7 @@ from openai import OpenAI
 # Load environment variables if python-dotenv is installed
 try:
     from dotenv import load_dotenv
+
     load_dotenv()
 except:
     pass
@@ -22,7 +23,10 @@ _DEFAULT_MODEL = os.getenv("SOV_PARSER_MODEL", "gpt-4.1-mini")
 # Utility: serialize Excel sheet into a prompt-friendly form
 # ---------------------------------------------------------------------
 
-def _serialize_sheet_rows(rows: List[List[Any]], max_rows: int = 80, max_cols: int = 25) -> List[List[str]]:
+
+def _serialize_sheet_rows(
+    rows: List[List[Any]], max_rows: int = 80, max_cols: int = 25
+) -> List[List[str]]:
     """
     Convert raw sheet rows (from openpyxl) into strings so they can be placed in a JSON prompt safely.
     """
@@ -45,7 +49,10 @@ def _serialize_sheet_rows(rows: List[List[Any]], max_rows: int = 80, max_cols: i
 # Core AI Function (with JSON fallback logic)
 # ---------------------------------------------------------------------
 
-def _call_openai_with_optional_json(model: str, system_msg: str, user_payload: Dict[str, Any]) -> Dict[str, Any]:
+
+def _call_openai_with_optional_json(
+    model: str, system_msg: str, user_payload: Dict[str, Any]
+) -> Dict[str, Any]:
     """
     Try structured JSON mode first.
     If the model rejects `response_format={'type': 'json_object'}`,
@@ -54,7 +61,7 @@ def _call_openai_with_optional_json(model: str, system_msg: str, user_payload: D
 
     messages = [
         {"role": "system", "content": system_msg},
-        {"role": "user", "content": json.dumps(user_payload)}
+        {"role": "user", "content": json.dumps(user_payload)},
     ]
 
     # --- 1. Attempt JSON-Mode ---
@@ -89,15 +96,13 @@ def _call_openai_with_optional_json(model: str, system_msg: str, user_payload: D
     try:
         return json.loads(raw)
     except:
-        raise RuntimeError(
-            "AI did not return valid JSON.\n"
-            f"Raw output:\n{raw}\n"
-        )
+        raise RuntimeError("AI did not return valid JSON.\n" f"Raw output:\n{raw}\n")
 
 
 # ---------------------------------------------------------------------
 # Public Function: Call AI for a single sheet
 # ---------------------------------------------------------------------
+
 
 def call_sov_sheet_agent(
     source_file: str,
@@ -215,6 +220,9 @@ RULES:
 - Exclude amenity rows (e.g., “Lighting”, “Mailboxes”, “Signs/Monuments”).
 - Detect buildings using heuristics: numerical building number + SqFt/Units patterns.
 - All numbers may be formatted as strings in the sheet; convert them to numbers if possible.
+- If building field is missing → copy from property-level relevant field, if both are missing set to null
+- For property fields you might need to consider summation of building fields if relevant
+- Count only valid buildings (rows where address is present), for Number of buildings field
 """
 
     payload = {

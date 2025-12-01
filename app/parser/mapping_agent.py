@@ -8,6 +8,7 @@ from openai import OpenAI
 # Load environment variables if python-dotenv is installed
 try:
     from dotenv import load_dotenv
+
     load_dotenv()
 except Exception:
     pass
@@ -96,6 +97,7 @@ BUILDING_FIELDS: List[str] = [
 # Sheet serialization
 # ---------------------------------------------------------------------
 
+
 def _serialize_sheet_rows(
     rows: List[List[Any]], max_rows: int = 150, max_cols: int = 40
 ) -> List[List[str]]:
@@ -117,9 +119,11 @@ def _serialize_sheet_rows(
         out.append(row_out)
     return out
 
+
 # ---------------------------------------------------------------------
 # Core AI helper (JSON mode + fallback)
 # ---------------------------------------------------------------------
+
 
 def _call_openai_with_optional_json(
     model: str,
@@ -163,10 +167,8 @@ def _call_openai_with_optional_json(
     try:
         return json.loads(raw)
     except Exception:
-        raise RuntimeError(
-            "AI did not return valid JSON.\n"
-            f"Raw output:\n{raw}\n"
-        )
+        raise RuntimeError("AI did not return valid JSON.\n" f"Raw output:\n{raw}\n")
+
 
 # ---------------------------------------------------------------------
 # System prompts (Extractor + Verifier)
@@ -213,6 +215,9 @@ STRICT RULES:
 - For building rows, always fill row_index with the 0-based row index within sheet_data.
 - Exclude obvious amenity rows (e.g., 'Mailboxes', 'Signs / Monuments', 'Lighting') from buildings.
 - If the sheet clearly has no insurable buildings, return "buildings": [].
+- If building field is missing → copy from property-level relevant field, if both are missing set to null
+- For property fields you might need to consider summation of building fields if relevant
+- Count only valid buildings (rows where address is present), for Number of buildings field
 
 IMPORTANT:
 - The JSON you output MUST be syntactically valid.
@@ -266,6 +271,7 @@ You MUST return valid JSON. Do not include explanations, comments, or extra keys
 # ---------------------------------------------------------------------
 # Public function: Call dual-agent AI for a single sheet
 # ---------------------------------------------------------------------
+
 
 def call_sov_sheet_agent(
     source_file: str,
