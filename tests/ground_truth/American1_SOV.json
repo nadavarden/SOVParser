@@ -49,7 +49,7 @@
       "location_zip": "98065-8933",
       "lat": "47.530909",
       "long": "-121.869462",
-      "betterview_id": "",
+      "betterview_id": null,
       "betterview_building_number": null,
       "units_per_building": "3",
       "replacement_cost_tiv": "1490000",
