@@ -114,7 +114,6 @@ def call_sov_sheet_agent(
     Sends one Excel sheet to the AI engine and requests:
 
         {
-            "properties": [...],
             "buildings": [...]
         }
 
@@ -137,92 +136,173 @@ You receive a JSON structure:
 You must return **valid JSON only** with the structure:
 
 {
-  "properties": [
-    { <ONE property record for this sheet> }
-  ],
   "buildings": [
     { <ONE building record per building row> },
     ...
   ]
 }
+====================================================================
+FEW-SHOT EXAMPLE 1
+====================================================================
 
-All property and building fields must match these canonical names exactly:
+### INPUT SHEET DATA (SIMPLIFIED)
+[
+  ["Bldg #", "Address #", "Street Name", "unit #s", "Building Replacement Cost", "# of units", "Livable Square Footage", "Garage Square Footage],
+  ["1", "13361, 59,55,51,47", "W Aleppo", "", "$1,241,989", "5", "7,015", "1,500"],
+  ["2", "13343, 39,35,31,27", "W Aleppo", "", "$1,241,989", "5", "7,015", "1,500"],
+  ["3", "13323, 19, 15, 11, 07, 03", "W Aleppo", "", "$1,515,315", "6", "8,697", "1,800"],
+  ["4", "13344, 42, 40, 38, 36", "Zephyr Court", "", $1,106,632", "5", "6,168", "1,500"]
 
-PROPERTY FIELDS:
-- source_file
-- sheet_name
-- number_of_buildings
-- roof_type
-- building_valuation_type
-- building_replacement_cost
-- blanket_outdoor_property
-- business_personal_property
-- total_insurable_value
-- general_liability
-- building_ordinance_a
-- building_ordinance_b
-- building_ordinance_c
-- equipment_breakdown
-- sewer_or_drain_backup
-- business_income
-- hired_and_non_owned_auto
-- playgrounds_number
-- streets_miles
-- pools_number
-- spas_number
-- wader_pools_number
-- restroom_building_sq_ft
-- guardhouse_sq_ft
-- clubhouse_sq_ft
-- fitness_center_sq_ft
-- tennis_courts_number
-- basketball_courts_number
-- other_sport_courts_number
-- walking_biking_trails_miles
-- lakes_or_ponds_number
-- boat_docks_and_slips_number
-- dog_parks_number
-- elevators_number
-- commercial_exposure_sq_ft
+]
+somewhere in the sheet there are other rows/columns with notes, totals, etc. which shouldn't be ignored. such as:
+[LOCATION (STATE, CITY, ZIP):		13322 W Stonebrook Drive, Sun City West, AZ 85375	]
+### EXPECTED JSON OUTPUT
+{
+  "buildings": [
+    {
+      "building_number": "1",
+      "location_full_address": "13361, 59,55,51,47 W Aleppo, Sun City West, AZ 85375",
+      "location_address": "13361, 59,55,51,47 W Aleppo",
+      "location_city": "Sun City West",
+      "location_state": "AZ",
+      "location_zip": "85375",
+      "units_per_building": 5.0,
+      "replacement_cost_tiv": 1241989.0,
+      "num_units": 5.0,
+      "livable_sq_ft": 7015.0,
+      "garage_sq_ft": 1500.0
+    }
+    },
+    {
+      "building_number": "2",
+      "location_full_address": ""13343, 39,35,31,27 W Aleppo, Sun City West, AZ 85375",
+      "location_address": "13343, 39,35,31,27 W Aleppo",
+      "location_city": "Sun City West",
+      "location_state": "AZ",
+      "location_zip": "85375",
+      "units_per_building": 5.0,
+      "replacement_cost_tiv": 1241989.0,
+      "num_units": 5.0,
+      "livable_sq_ft": 7015.0,
+      "garage_sq_ft": 1500.0
+    },
+    {
+        "building_number": 3,
+        "location_full_address": "13323, 19, 15, 11, 07, 03 W Aleppo, Sun City West, AZ 85375",
+        "location_address": "13323, 19, 15, 11, 07, 03 W Aleppo",
+        "location_city": "Sun City West",
+        "location_state": "AZ",
+        "location_zip": "85375",
+        "units_per_building": 6.0,
+        "replacement_cost_tiv": 1515315.0,
+        "num_units": 6.0,
+        "livable_sq_ft": 8697.0,
+        "garage_sq_ft": 1800.0
+    },
+    {
+        "building_number": 4,
+        "location_full_address": "13346, 48, 50,52,54 Zephyr Court, Sun City West, AZ 85375",
+        "location_address": "13346, 48, 50,52,54 Zephyr Court",
+        "location_city": "Sun City West",
+        "location_state": "AZ",
+        "location_zip": "85375",
+        "units_per_building": 5.0,
+        "replacement_cost_tiv": 11066320,
+        "num_units": 5.0,
+        "livable_sq_ft": 6168.0,
+        "garage_sq_ft": 1500.0
+    }
+  ]
+}
+
+====================================================================
+FEW-SHOT EXAMPLE 2
+====================================================================
+
+### INPUT SHEET DATA (SIMPLIFIED)
+[
+  ["Bldg", "Street #", "Street Name", "City", "State", "Zip","100% Replacement Cost", "# Of Units", "Unit #", "Building Square Footage", "Attached Garage Square Footage],
+  ["1", "10555", "Montgomery Road", "Montgomery", "OH", "45242", "$3,769,090", "20", "1 thru 20", "19800"],
+  ["2", "10555", "Montgomery Road", "Montgomery", "OH", "45242", "$1,118,054", "8", "21 thru 28", "5232"],
+  ["3", "10555", "Montgomery Road", "Montgomery", "OH", "45242", "$3,112,306", "8", "29 thru 36", "12238"]
+]
+
+### EXPECTED JSON OUTPUT
+{
+  "buildings": [
+    {
+      "building_number": "1",
+      "location_full_address": null,
+      "location_address": null,
+      "location_city": "Montgomery",
+      "location_state": "OH",
+      "location_zip": "45242",
+      "units_per_building": "1 thru 20",
+      "replacement_cost_tiv": 3769090.0,
+      "num_units": 20.0,
+      "livable_sq_ft": 19800.0,
+      "garage_sq_ft": 0.0
+    },
+    {
+      "building_number": "2",
+      "location_full_address": null,
+      "location_address": null,
+      "location_city": "Montgomery",
+      "location_state": "OH",
+      "location_zip": "45242",
+      "units_per_building": "21 thru 28",
+      "replacement_cost_tiv": 1118054.0,
+      "num_units": 8.0,
+      "livable_sq_ft": 5232.0,
+      "garage_sq_ft": 0.0
+    },
+    {
+      "building_number": "3",
+      "location_full_address": null,
+      "location_address": null,
+      "location_city": "Montgomery",
+      "location_state": "OH",
+      "location_zip": "45242",
+      "units_per_building": "29 thru 36",
+      "replacement_cost_tiv": 3112306.0,
+      "num_units": 8.0,
+      "livable_sq_ft": 12238.0,
+      "garage_sq_ft": 0.0
+    }
+  ]
+}
+
+====================================================================
+INSTRUCTIONS
+====================================================================
+
+All building fields must match these canonical names exactly:
 
 BUILDING FIELDS:
 - source_file
 - sheet_name
-- row_index          (1-based Excel index if possible)
 - building_number
 - location_full_address
 - location_address
 - location_city
 - location_state
 - location_zip
-- lat
-- long
-- betterview_id
-- betterview_building_number
 - units_per_building
 - replacement_cost_tiv
 - num_units
 - livable_sq_ft
 - garage_sq_ft
-- commercial_sq_ft
-- building_class
-- parking_type
-- roof_type
-- smoke_detectors
-- sprinklered
-- year_of_construction
-- number_of_stories
-- construction_type
 
 RULES:
 - ONE property record per worksheet.
 - Use null where unknown.
-- Exclude amenity rows (e.g., “Lighting”, “Mailboxes”, “Signs/Monuments”).
 - Detect buildings using heuristics: numerical building number + SqFt/Units patterns.
 - All numbers may be formatted as strings in the sheet; convert them to numbers if possible.
 - If building field is missing → copy from property-level relevant field, if both are missing set to null
-- For property fields you might need to consider summation of building fields if relevant
 - Count only valid buildings (rows where address is present), for Number of buildings field
+- Note that some files may have several several sheets in them where one sheet is for total summary and the other is per building details
+- Somewhere in the sheet there are other rows/columns with notes, totals, etc. which shouldn't be ignored. such as:
+[LOCATION (STATE, CITY, ZIP):		13322 W Stonebrook Drive, Sun City West, AZ 85375	]
 """
 
     payload = {
@@ -241,4 +321,4 @@ RULES:
             time.sleep(1.2)
 
     # should never hit here
-    return {"properties": [], "buildings": []}
+    return {"buildings": []}

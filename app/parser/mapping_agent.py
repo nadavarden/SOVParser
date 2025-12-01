@@ -19,7 +19,7 @@ except Exception:
 
 _client = OpenAI()
 
-_DEFAULT_MODEL = os.getenv("SOV_PARSER_MODEL", "gpt-4.1-mini")
+_DEFAULT_MODEL = os.getenv("SOV_PARSER_MODEL", "gpt-5.1")
 
 # ---------------------------------------------------------------------
 # Canonical fields (must stay in sync with sov_parser_ai.py)
