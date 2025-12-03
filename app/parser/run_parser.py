@@ -3,8 +3,8 @@ from app.parser.sov_parser_ai import SOVParser
 
 
 def main():
-    input_path = "SOV_docs/Bowers/Bowers3_SOV.xlsx"  # <-- change this
-    output_path = "tests/results/Bowers3.json"  # <-- output file
+    input_path = "SOV_docs/LaBarre/LaBarre2_SOV.xlsx"  # <-- change this
+    output_path = "tests/results/LaBarre2.json"  # <-- output file
 
     parser = SOVParser()
     result = parser.parse_excel(input_path)
