@@ -5,7 +5,6 @@ from typing import Any, Dict, List
 
 from openai import OpenAI
 
-# Load environment variables if python-dotenv is installed
 try:
     from dotenv import load_dotenv
 
@@ -13,58 +12,27 @@ try:
 except:
     pass
 
-# Initialize client
 _client = OpenAI()
 
-# Choose a default model, overridable in .env
 _DEFAULT_MODEL = os.getenv("SOV_PARSER_MODEL", "gpt-4.1-mini")
 
-# ---------------------------------------------------------------------
-# Utility: serialize Excel sheet into a prompt-friendly form
-# ---------------------------------------------------------------------
 
-
-def _serialize_sheet_rows(
-    rows: List[List[Any]], max_rows: int = 80, max_cols: int = 25
-) -> List[List[str]]:
-    """
-    Convert raw sheet rows (from openpyxl) into strings so they can be placed in a JSON prompt safely.
-    """
+def _serialize_sheet_rows(rows, max_rows=80, max_cols=25):
     out = []
     for r in rows[:max_rows]:
-        row_out = []
-        for cell in r[:max_cols]:
-            if cell is None:
-                row_out.append("")
-            else:
-                try:
-                    row_out.append(str(cell))
-                except:
-                    row_out.append("")
-        out.append(row_out)
+        row = []
+        for c in r[:max_cols]:
+            row.append("" if c is None else str(c))
+        out.append(row)
     return out
 
 
-# ---------------------------------------------------------------------
-# Core AI Function (with JSON fallback logic)
-# ---------------------------------------------------------------------
-
-
-def _call_openai_with_optional_json(
-    model: str, system_msg: str, user_payload: Dict[str, Any]
-) -> Dict[str, Any]:
-    """
-    Try structured JSON mode first.
-    If the model rejects `response_format={'type': 'json_object'}`,
-    fall back to plain text + json.loads().
-    """
-
+def _call_openai_with_optional_json(model, system_msg, user_payload):
     messages = [
         {"role": "system", "content": system_msg},
         {"role": "user", "content": json.dumps(user_payload)},
     ]
 
-    # --- 1. Attempt JSON-Mode ---
     try:
         completion = _client.chat.completions.create(
             model=model,
@@ -72,184 +40,131 @@ def _call_openai_with_optional_json(
             temperature=0.1,
             response_format={"type": "json_object"},
         )
-
-        content = completion.choices[0].message.content
-        return json.loads(content)
+        return json.loads(completion.choices[0].message.content)
 
     except Exception as e:
-        # If the model does NOT support structured JSON:
-        if "response_format" in str(e).lower():
-            pass  # fall through to fallback mode
-        else:
-            raise  # real error
+        if "response_format" not in str(e).lower():
+            raise
 
-    # --- 2. Fallback: no structured JSON mode ---
     completion = _client.chat.completions.create(
-        model=model,
-        messages=messages,
-        temperature=0.1,
+        model=model, messages=messages, temperature=0.1
     )
-
     raw = completion.choices[0].message.content
 
-    # Attempt to parse JSON if present
     try:
         return json.loads(raw)
     except:
-        raise RuntimeError("AI did not return valid JSON.\n" f"Raw output:\n{raw}\n")
+        raise RuntimeError(f"AI did not return valid JSON:\n{raw}")
 
 
-# ---------------------------------------------------------------------
-# Public Function: Call AI for a single sheet
-# ---------------------------------------------------------------------
-
-
-def call_sov_sheet_agent(
-    source_file: str,
-    sheet_name: str,
-    rows: List[List[Any]],
-    model: str = None,
-) -> Dict[str, Any]:
-    """
-    Sends one Excel sheet to the AI engine and requests:
-
-        {
-            "buildings": [...]
-        }
-
-    This is full-AI mode (Mode C) — the AI constructs the structure itself.
-    """
-
+def call_sov_sheet_agent(source_file, sheet_name, rows, model=None):
     model = model or _DEFAULT_MODEL
     sheet_data = _serialize_sheet_rows(rows)
 
     system_msg = """
 You are an expert in parsing insurance Statement of Values (SOV) spreadsheets.
 
-You receive a JSON structure:
+You receive JSON:
 {
   "source_file": "...",
   "sheet_name": "...",
-  "sheet_data": [[row1col1, row1col2, ...], [row2col1, ...], ...]
+  "sheet_data": [ [...], [...], ... ]
 }
 
-You must return **valid JSON only** with the structure:
+You must return **strict valid JSON** in the form:
+
 {
+  "sheet_type": "general" | "building",
   "buildings": [
-    { <ONE building record per building row> },
-    ...
+      { ... building or metadata record ... }
   ]
 }
 
 ====================================================================
-GLOBAL BEHAVIOR & MULTI-SHEET LOGIC
+MANDATORY OUTPUT BEHAVIOR
 ====================================================================
 
-The workbook may contain multiple sheets. Some sheets contain building-level rows, while others contain property-level metadata.
+Every sheet MUST return:
 
-**You MUST support:**
-- Sheets with GENERAL PROPERTY INFORMATION (e.g., “General Information”, “Property Info”, “Summary”).
-- Sheets with MANAGEMENT INFO that should NOT overwrite property info.
-- Sheets with detailed BUILDING rows.
-- Sheets with totals, notes, disclaimers—ignore those but read any useful metadata inside them.
+► "sheet_type": "general"
+    → when the sheet contains general/property-level information
+    → you MUST output EXACTLY ONE metadata object in "buildings"
+    → you MUST NOT output any real building rows
 
-If a sheet contains property-level information, extract:
+► "sheet_type": "building"
+    → when the sheet contains building-level rows
+    → you MUST output ONE record per real building row
+    → never output null/empty rows
 
-- location_full_address  
-- location_address  
-- location_city  
-- location_state  
-- location_zip  
-
-Store this information mentally as **property-level context**.
-
-Then, for every building row in any sheet:
-
-- If the building row provides its own values → use them.
-- If the building row is missing a value → fill from property-level context.
-- If both are missing → set null.
-
-IMPORTANT RULE — IDENTIFYING AND HANDLING GENERAL / SUMMARY SHEETS
-------------------------------------------------------------------
-
-Some sheets contain GENERAL PROPERTY INFORMATION and **must not** be treated as building sheets.
-
-A sheet is a GENERAL / SUMMARY sheet when it:
-
-- Contains headers such as:
-  “General Information”, “Property Information”, “Property Summary”, “Location (State, City, Zip)”
-- Contains only one location
-- Contains totals, summaries, management info, or global values
-- Does NOT contain repeated building rows
-- Does NOT contain building numbers
-- Does NOT contain unit ranges, square footage values, or multiple addresses
-
-When the sheet is a GENERAL sheet:
-
-### YOU MUST:
-- Extract property-level values:
-  - location_address
-  - location_city
-  - location_state
-  - location_zip
-  - (optionally location_full_address)
-
-### YOU MUST NOT:
-- Produce any building objects from this sheet
-- Include this sheet's information as a separate building
-
-### For any building parsed on other sheets:
-- If a building is missing location_city/location_state/location_zip/location_address → 
-  fill in the values obtained from the GENERAL sheet.
+This field is REQUIRED so downstream logic can categorize sheets correctly.
+Failure to obey this rule breaks the parser.
 
 ====================================================================
-IDENTIFYING PROPERTY-LEVEL SHEETS
+WHEN TO MARK A SHEET AS GENERAL ("sheet_type": "general")
 ====================================================================
 
-A sheet should be treated as a PROPERTY-LEVEL info sheet if:
+A sheet IS GENERAL if ANY of the following are true:
 
-- It contains labels like:
-    “General Information”, “Property Information”, “Location (State, City, Zip)”, “Property Address”
-- It contains a single address or location block
-- It contains no repeating building-like rows
-- It does NOT contain unit numbers, ranges, or square footage patterns
+- Contains labels like:
+    "General Information", "Property Information", "Property Info",
+    "Property Summary", "Location (State, City, Zip)",
+    "Property Address", "Insured Location"
 
-A sheet should NOT be treated as property-level if it is:
+- Contains a single address/location block
 
-- “Management Information”
-- “Policy Information”
-- “Insurance Carrier / Broker info”
-- Pure notes or disclaimers
+- Contains totals, summaries, or metadata but NOT repeated building rows
 
-====================================================================
-IDENTIFYING BUILDING ROWS
-====================================================================
+- Does NOT contain building numbers, unit ranges, SqFt columns, replacement cost values, or multiple addresses
 
-A row should be interpreted as a building record if:
+- Contains notes such as:
+    LOCATION (STATE, CITY, ZIP): 13322 W Stonebrook Drive, Sun City West, AZ 85375
 
-- It contains a building number
-OR
-- It contains a valid address/cluster of addresses
-OR
-- It contains SqFt, unit counts, or replacement cost values
-
-Use heuristics:
-
-- Columns like “Bldg”, “Bldg #”, “Building Number”, “Street #”, “Address #”, “Unit #s”, “# of Units”
-- Rows with numbers + addresses + cost/SqFt almost always represent a building.
-
-A row MUST NOT be interpreted as a building if:
-
-- It contains only one overall address for the property
-- It has no building number, unit count, SqFt, or cost values
-- It belongs to a GENERAL INFORMATION sheet
+A GENERAL sheet MUST NOT produce any real buildings.
 
 ====================================================================
-CANONICAL OUTPUT FIELDS (ALL REQUIRED IN EACH BUILDING OBJECT)
+GENERAL SHEET OUTPUT FORMAT
 ====================================================================
 
-- source_file
-- sheet_name
+When "sheet_type": "general":
+
+Return EXACTLY ONE object inside "buildings":
+
+{
+  "building_number": null,
+  "location_full_address": <best full address>,
+  "location_address": <address without city/state>,
+  "location_city": <city>,
+  "location_state": <state>,
+  "location_zip": <zip>,
+  "units_per_building": null,
+  "replacement_cost_tiv": null,
+  "num_units": null,
+  "livable_sq_ft": null,
+  "garage_sq_ft": null
+}
+
+Never output more than one record.
+Never output any building_number other than null.
+
+====================================================================
+WHEN TO MARK A SHEET AS BUILDING ("sheet_type": "building")
+====================================================================
+
+A sheet IS BUILDING if:
+
+- It contains building numbers ("1", "2", ... OR "Bldg", "Bldg #")
+- It contains multiple addresses
+- It contains replacement cost, SqFt, units, or unit ranges
+- Rows resemble typical SOV building rows
+
+For building sheets: output one record per building row.
+
+====================================================================
+CANONICAL FIELDS FOR EVERY RECORD
+====================================================================
+
+The following must ALWAYS appear in every record:
+
 - building_number
 - location_full_address
 - location_address
@@ -262,33 +177,19 @@ CANONICAL OUTPUT FIELDS (ALL REQUIRED IN EACH BUILDING OBJECT)
 - livable_sq_ft
 - garage_sq_ft
 
+Missing values → use null.
+
 ====================================================================
-RULES FOR DATA EXTRACTION
+RULES FOR BUILDING DATA
 ====================================================================
 
-1. **Normalization**
-   - Strings may contain extra spaces, commas, punctuation, or ranges like “13361, 59, 55”.
-   - Clean and standardize values when possible.
-   - Convert numeric strings (“1,241,989”, “7015”) into numbers.
+1. Normalize all address fields (remove extra spaces/commas).
+2. Normalize numeric values ("1,241,989" → 1241989).
+3. Handle unit ranges ("1 thru 20").
+4. Handle multi-number addresses ("13361, 59, 55").
+5. Leave missing fields as null; Python will fill from general metadata.
 
-2. **Missing Data Handling**
-   - If a building field is missing → copy from property-level info.
-   - If BOTH are missing → set null.
-
-3. **Ranges in Address or Units**
-   - Handle multi-number addresses: “13344, 42, 40, 38”.
-   - Handle unit ranges: “1 thru 20”, “29-36”.
-
-4. **Irrelevant Sheets**
-   - Ignore totals, summaries, disclaimers.
-   - Ignore "Management Information" EXCEPT do NOT use its location for buildings.
-5.- Note that some files may have several several sheets in them where one sheet is for total summary and the other is per building details
-  - Somewhere in the sheet there are other rows/columns with notes, totals, etc. which shouldn't be ignored. such as:
-  [LOCATION (STATE, CITY, ZIP):		13322 W Stonebrook Drive, Sun City West, AZ 85375	]
-
-6. **Always output strictly valid JSON.**
-====================================================================
-FEW-SHOT EXAMPLE 1
+=EW-SHOT EXAMPLE 1
 ====================================================================
 
 ### INPUT SHEET DATA (SIMPLIFIED)
@@ -425,14 +326,10 @@ FEW-SHOT EXAMPLE 2
         "sheet_data": sheet_data,
     }
 
-    # Retry logic for robustness
-    for attempt in range(3):
+    for _ in range(3):
         try:
             return _call_openai_with_optional_json(model, system_msg, payload)
-        except Exception as e:
-            if attempt == 2:
-                raise
+        except:
             time.sleep(1.2)
 
-    # should never hit here
-    return {"buildings": []}
+    return {"sheet_type": "building", "buildings": []}
