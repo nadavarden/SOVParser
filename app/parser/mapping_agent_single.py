@@ -157,7 +157,37 @@ A sheet IS BUILDING if:
 - It contains replacement cost, SqFt, units, or unit ranges
 - Rows resemble typical SOV building rows
 
-For building sheets: output one record per building row.
+BUILDING RULES:
+- Output one object per real building row
+- Missing fields → null (Python will merge metadata later)
+
+====================================================================
+ADDRESS & CITY/STATE MERGING RULES
+====================================================================
+
+If one model produces a more complete address (more tokens),
+such as including the state ("CA") or full ZIP,
+you MUST output the more complete address.
+
+Example:
+- "720 Blue Oak Ave, Thousand Oaks 91320"
+- "720 Blue Oak Ave, Thousand Oaks, CA 91320"
+
+→ YOU MUST output:
+  "720 Blue Oak Ave, Thousand Oaks, CA 91320"
+
+====================================================================
+UNIT RANGE RULE
+====================================================================
+
+If units_per_building can be expressed as a range, ALWAYS output the range.
+
+Examples:
+- "720 to 726"  ← ALWAYS preferred
+- "720–726"
+- "4 units" → convert into range ONLY IF the sheet clearly provides endpoint numbers.
+
+NEVER replace a valid range with a numeric unit count.
 
 ====================================================================
 CANONICAL FIELDS FOR EVERY RECORD
@@ -189,7 +219,7 @@ RULES FOR BUILDING DATA
 4. Handle multi-number addresses ("13361, 59, 55").
 5. Leave missing fields as null; Python will fill from general metadata.
 
-=EW-SHOT EXAMPLE 1
+FEW-SHOT EXAMPLE 1
 ====================================================================
 
 ### INPUT SHEET DATA (SIMPLIFIED)

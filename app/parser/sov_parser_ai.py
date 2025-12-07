@@ -37,7 +37,6 @@ BUILDING_FIELDS = [
 ]
 
 NUMERIC_BUILDING_FIELDS = {
-    "units_per_building",
     "replacement_cost_tiv",
     "num_units",
     "livable_sq_ft",
@@ -156,6 +155,36 @@ def _fuzzy_equal(a, b):
     return False
 
 
+def choose_richer_value(field: str, v1, v2):
+    if v1 is None and v2 is None:
+        return None
+
+    # --- Address fields: pick more complete form ---
+    if field in ["location_full_address", "location_address"]:
+        return v1 if len(str(v1)) >= len(str(v2)) else v2
+
+    # --- Units per building MUST be a range ---
+    if field == "units_per_building":
+
+        def is_range(v):
+            if v is None:
+                return False
+            s = str(v)
+            return (" to " in s) or ("-" in s) or ("," in s) or ("thru" in s.lower())
+
+        # Prefer ranges over numeric counts
+        if is_range(v1) and not is_range(v2):
+            return v1
+        if is_range(v2) and not is_range(v1):
+            return v2
+
+        # If both are ranges, use the more complete one
+        return v1 if len(str(v1)) >= len(str(v2)) else v2
+
+    # --- Default fallback ---
+    return v1 if len(str(v1)) >= len(str(v2)) else v2
+
+
 # =====================================================================
 # DUAL LLM MERGE LOGIC — WITH sheet_type preserved
 # =====================================================================
@@ -163,67 +192,77 @@ def _fuzzy_equal(a, b):
 
 def compare_model_outputs(a: Dict[str, Any], b: Dict[str, Any]) -> Dict[str, Any]:
     """
-    Your original fuzzy merge logic —
-    NOW extended to also merge sheet_type safely and correctly.
+    Dual-LLM merge with:
+    - fuzzy matching
+    - completeness scoring
+    - enriched-address preference
+    - range-over-count rule for units
+    - robust missing-key handling
     """
 
-    # --- Merge sheet_type ---
+    # -----------------------
+    # Merge sheet_type first
+    # -----------------------
     type_a = a.get("sheet_type")
     type_b = b.get("sheet_type")
 
-    # RULE:
-    # If either LLM says "general" → treat sheet as general.
-    if type_a == "general" or type_b == "general":
-        merged_type = "general"
-    else:
-        merged_type = "building"
+    # If either says general → treat as general
+    merged_type = (
+        "general" if (type_a == "general" or type_b == "general") else "building"
+    )
 
-    buildings_a = a.get("buildings", [])
-    buildings_b = b.get("buildings", [])
+    rows_a = a.get("buildings", []) or []
+    rows_b = b.get("buildings", []) or []
 
-    final = {"sheet_type": merged_type, "buildings": []}
-
-    max_len = max(len(buildings_a), len(buildings_b))
+    max_len = max(len(rows_a), len(rows_b))
+    merged_rows = []
 
     for idx in range(max_len):
-        rec_a = buildings_a[idx] if idx < len(buildings_a) else {}
-        rec_b = buildings_b[idx] if idx < len(buildings_b) else {}
+        rec_a = rows_a[idx] if idx < len(rows_a) else {}
+        rec_b = rows_b[idx] if idx < len(rows_b) else {}
 
         merged = {}
         mismatches = {}
 
-        for field in BUILDING_FIELDS:
-            v1 = rec_a.get(field)
-            v2 = rec_b.get(field)
+        for key in BUILDING_FIELDS:
+            v1 = rec_a.get(key)
+            v2 = rec_b.get(key)
 
-            # both missing
+            # CASE 1 — both None
             if v1 is None and v2 is None:
-                merged[field] = None
+                merged[key] = None
                 continue
 
-            # fuzzy match
+            # CASE 2 — fuzzy match results → keep v1
             if _fuzzy_equal(v1, v2):
-                merged[field] = v1
+                merged[key] = v1
                 continue
 
-            # one missing → accept the non-null one
+            # CASE 3 — one missing → take non-missing value
             if v1 is None and v2 is not None:
-                merged[field] = v2
+                merged[key] = v2
                 continue
             if v2 is None and v1 is not None:
-                merged[field] = v1
+                merged[key] = v1
                 continue
 
-            # mismatch
-            mismatches[field] = {"gpt_5_1": v1, "gpt_4o_mini": v2}
+            # CASE 4 — both exist but different → choose richer value
+            chosen = choose_richer_value(key, v1, v2)
+            if chosen is None:
+                # fallback preserve v1
+                chosen = v1
+
+            merged[key] = chosen
+
+            mismatches[key] = {"gpt_5_1": v1, "gpt_4o_mini": v2, "chosen": chosen}
 
         if mismatches:
             print(f"\n⚠️  LLM MISMATCH DETECTED at index {idx}:")
             print(json.dumps(mismatches, indent=4))
 
-        final["buildings"].append(merged)
+        merged_rows.append(merged)
 
-    return final
+    return {"sheet_type": merged_type, "buildings": merged_rows}
 
 
 # =====================================================================
@@ -258,7 +297,11 @@ def parse_workbook(path: str) -> List[BuildingRecord]:
     source_file = os.path.basename(path)
 
     for sheet_name in wb.sheetnames:
-        rows = _rows(wb[sheet_name])
+        ws = wb[sheet_name]
+        if getattr(ws, "sheet_state", "visible") != "visible":
+            print(f"⚠️  Skipping hidden sheet: {sheet_name}")
+            continue
+        rows = _rows(ws)
 
         # --- Run dual models ---
         ai_a = call_sov_sheet_agent(source_file, sheet_name, rows, model="gpt-5.1")
@@ -282,16 +325,15 @@ def parse_workbook(path: str) -> List[BuildingRecord]:
         # BUILDING SHEET
         # ---------------------------------------------------------
         for rec in returned_buildings:
-            b = BuildingRecord(
-                **{
-                    field: (
-                        _coerce_float(rec[field])
-                        if field in NUMERIC_BUILDING_FIELDS
-                        else rec[field]
-                    )
-                    for field in BUILDING_FIELDS
-                }
-            )
+            safe_record = {}
+            for field in BUILDING_FIELDS:
+                raw = rec.get(field)
+                if field in NUMERIC_BUILDING_FIELDS:
+                    safe_record[field] = _coerce_float(raw)
+                else:
+                    safe_record[field] = raw if raw not in ("", "null") else None
+
+            b = BuildingRecord(**safe_record)
             all_buildings.append(b)
 
     # ---------------------------------------------------------
