@@ -1,0 +1,17 @@
+{
+    "buildings": [
+        {
+            "building_number": "1",
+            "location_full_address": null,
+            "location_address": "1950 Farnsworth Ln",
+            "location_city": "Northbrook",
+            "location_state": "IL",
+            "location_zip": "60062",
+            "units_per_building": null,
+            "replacement_cost_tiv": 15366915.0,
+            "num_units": 30.0,
+            "livable_sq_ft": 54600.0,
+            "garage_sq_ft": 9000.0
+        }
+    ]
+}
