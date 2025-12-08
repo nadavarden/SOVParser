@@ -289,7 +289,7 @@ def extract_property_metadata(record: Dict[str, Any]) -> Dict[str, Any]:
 # =====================================================================
 
 
-def parse_workbook(path: str) -> List[BuildingRecord]:
+def parse_workbook(path: str, control_number: int) -> List[BuildingRecord]:
     wb = load_workbook(path, data_only=True)
 
     all_buildings: List[BuildingRecord] = []
@@ -353,6 +353,28 @@ def parse_workbook(path: str) -> List[BuildingRecord]:
 
 
 class SOVParser:
-    def parse_excel(self, path: str) -> Dict[str, Any]:
-        buildings = parse_workbook(path)
-        return {"buildings": [b.__dict__ for b in buildings]}
+    def parse_excel(self, path: str, control_number: int) -> Dict[str, Any]:
+        buildings = parse_workbook(path, control_number)
+
+        output = []
+        for b in buildings:
+            rec = b.__dict__
+
+            formatted = {
+                "control_number": int(control_number),
+                "building_number": int(rec.get("building_number") or 0),
+                "location_full_address": (rec.get("location_full_address") or ""),
+                "location_address": (rec.get("location_address") or ""),
+                "location_city": (rec.get("location_city") or ""),
+                "location_state": (rec.get("location_state") or ""),
+                "location_zip": int(rec.get("location_zip") or 0),
+                "units_per_building": str(rec.get("units_per_building") or ""),
+                "replacement_cost_tiv": float(rec.get("replacement_cost_tiv") or 0.0),
+                "num_units": int(rec.get("num_units") or 0),
+                "livable_sq_ft": float(rec.get("livable_sq_ft") or 0.0),
+                "garage_sq_ft": float(rec.get("garage_sq_ft") or 0.0),
+            }
+
+            output.append(formatted)
+
+        return {"buildings": output}

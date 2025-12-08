@@ -5,6 +5,8 @@ import sys
 from app.parser.sov_parser_ai import SOVParser
 import json
 import zipfile
+import xlrd
+from openpyxl import Workbook
 
 # Load environment variables if python-dotenv is installed
 try:
@@ -15,6 +17,25 @@ except:
     pass
 
 OUTPUT_JSON_DIR = "tests/results"
+
+
+def convert_xls_to_xlsx(xls_path: str) -> str:
+    """Converts an old .xls file into .xlsx for openpyxl compatibility."""
+    xlsx_path = xls_path + ".converted.xlsx"
+
+    book = xlrd.open_workbook(xls_path)
+    out_wb = Workbook()
+    out_wb.remove(out_wb.active)
+
+    for sheet_name in book.sheet_names():
+        in_sheet = book.sheet_by_name(sheet_name)
+        out_sheet = out_wb.create_sheet(title=sheet_name)
+
+        for r in range(in_sheet.nrows):
+            out_sheet.append(in_sheet.row_values(r))
+
+    out_wb.save(xlsx_path)
+    return xlsx_path
 
 
 def extract_embedded_excel(zip_path, output_dir="downloaded_sovs/extracted"):
@@ -162,7 +183,11 @@ def process_sov(control_number: int):
         print("🤖 Running parser...")
         parser = SOVParser()
 
-        parsed_json = parser.parse_excel(real_excel)
+        if real_excel.lower().endswith(".xls"):
+            print(f"🔄 Converting legacy XLS to XLSX: {real_excel}")
+            real_excel = convert_xls_to_xlsx(real_excel)
+
+        parsed_json = parser.parse_excel(real_excel, control_number=control_number)
 
         # 3. Save JSON to output directory
         os.makedirs(OUTPUT_JSON_DIR, exist_ok=True)
@@ -180,5 +205,5 @@ def process_sov(control_number: int):
 
 
 if __name__ == "__main__":
-    control_number = 53497
+    control_number = 53447
     process_sov(control_number)

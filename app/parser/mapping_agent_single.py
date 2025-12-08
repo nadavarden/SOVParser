@@ -180,14 +180,37 @@ Example:
 UNIT RANGE RULE
 ====================================================================
 
-If units_per_building can be expressed as a range, ALWAYS output the range.
+units_per_building MUST BE A RANGE, NEVER A COUNT
+
+units_per_building represents the unit identifiers covered by that building.
 
 Examples:
-- "720 to 726"  ← ALWAYS preferred
-- "720–726"
-- "4 units" → convert into range ONLY IF the sheet clearly provides endpoint numbers.
+	•	701 to 709
+	•	739, 741
+	•	21 thru 28
+	•	13361, 59, 55
 
-NEVER replace a valid range with a numeric unit count.
+It is NOT the number of units.
+Do NOT output numeric counts in this field (e.g., 4, 6, 3).
+If the sheet shows counts and ranges, ALWAYS use the range.
+
+If the sheet shows only start + end numbers, convert automatically:
+	•	Input: "720-726" → Output: "720 to 726"
+	•	Input: "601–607" → Output: "601 to 607"
+
+If ambiguous, choose the more descriptive / expanded form.
+
+====================================================================
+UNIT-LEVEL ROWS — Must NOT produce buildings
+====================================================================
+
+A row represents units, NOT buildings, when MOST of the following are true:
+	•	The first column contains only numbers (no street name)
+	•	City/State fields are blank or missing
+	•	No street suffix (Ave, Ct, Rd, Ln, Way, St, Blvd, Dr) appears anywhere in the row
+	•	No replacement cost, # units, or building sqft fields
+	•	Only a single value like square footage appears
+	•	Header includes any of: “Unit”, “Unit #”, “Apartment”, “Sq. Footage”
 
 ====================================================================
 CANONICAL FIELDS FOR EVERY RECORD
