@@ -170,16 +170,30 @@ def process_sov(control_number: int):
         print(f"📄 Found SOV: {file_name}")
         print("==============================")
 
-        # 1. Download the Excel SOV file
+        # Download the Excel SOV file
         local_zip = download_sov_file(conn, guid, file_name)
-        # Extract real Excel from inside the wrapper ZIP
-        real_excel = extract_embedded_excel(local_zip)
-
         if not local_zip:
             print("❌ Failed to download SOV file.")
             return
 
-        # 2. Parse the Excel using your AI agent
+        # Extract the real Excel file inside the ZIP wrapper
+        real_excel = extract_embedded_excel(local_zip)
+
+        # ---------------------------------------------
+        # RENAME extracted file → <control_number>sov.xls/.xlsx
+        # ---------------------------------------------
+        extracted_dir = os.path.dirname(real_excel)
+        original_ext = os.path.splitext(real_excel)[1].lower()
+
+        # Ensure correct renamed filename
+        new_excel_name = f"{control_number}sov{original_ext}"
+        new_excel_path = os.path.join(extracted_dir, new_excel_name)
+
+        os.rename(real_excel, new_excel_path)
+        print(f"🔄 Renamed extracted file → {new_excel_path}")
+
+        real_excel = new_excel_path
+        # Parse the Excel using your AI agent
         print("🤖 Running parser...")
         parser = SOVParser()
 
@@ -189,9 +203,9 @@ def process_sov(control_number: int):
 
         parsed_json = parser.parse_excel(real_excel, control_number=control_number)
 
-        # 3. Save JSON to output directory
+        # Save JSON to output directory
         os.makedirs(OUTPUT_JSON_DIR, exist_ok=True)
-        json_filename = os.path.splitext(file_name)[0] + ".json"
+        json_filename = f"{control_number}sov" + ".json"
         json_path = os.path.join(OUTPUT_JSON_DIR, json_filename)
 
         with open(json_path, "w") as jf:
@@ -205,5 +219,5 @@ def process_sov(control_number: int):
 
 
 if __name__ == "__main__":
-    control_number = 53447
+    control_number = 53444
     process_sov(control_number)
